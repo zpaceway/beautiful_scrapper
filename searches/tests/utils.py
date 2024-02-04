@@ -6,10 +6,14 @@ dirname, _ = os.path.split(os.path.abspath(__file__))
 
 def mocked_scrape_images_from_freeimages_com_get_request(*args, **kwargs):
     class MockResponse:
-        text = ""
+        _text = ""
 
         def __init__(self, html) -> None:
-            self.text = html
+            self._text = html
+
+        @property
+        def text(self):
+            return self._text
 
     mocked_html_1 = ""
     mocked_html_2 = ""
