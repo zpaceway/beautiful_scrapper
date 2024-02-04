@@ -2,4 +2,4 @@ beautifulsoup4==4.12.3
 Django==5.0.1
 python-slugify==8.0.2
 requests==2.31.0
-promisipy==0.0.2
+promisipy==0.0.5
